@@ -148,7 +148,7 @@ export async function POST(request: NextRequest) {
     })
 
     if (wasteItems.length !== wasteItemIds.length) {
-      const foundIds = wasteItems.map(item => item.id)
+      const foundIds = wasteItems.map((item: any) => item.id)
       const missingIds = wasteItemIds.filter((id: string) => !foundIds.includes(id))
       return NextResponse.json(
         { error: `Waste items not found or inactive: ${missingIds.join(', ')}` },
@@ -157,7 +157,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Create waste item lookup map for validation
-    const wasteItemMap = new Map(wasteItems.map(item => [item.id, item]))
+    const wasteItemMap = new Map(wasteItems.map((item: any) => [item.id, item]))
 
     let totalAmount = 0
     let totalWeight = 0
