@@ -44,9 +44,9 @@ export async function GET(
     }
 
     // Calculate statistics
-    const totalWeight = wasteItem.transactionItems.reduce((sum, item) => sum + item.weight, 0)
+    const totalWeight = wasteItem.transactionItems.reduce((sum: number, item: any) => sum + item.weight, 0)
     const totalTransactions = wasteItem.transactionItems.length
-    const totalRevenue = wasteItem.transactionItems.reduce((sum, item) => sum + item.subtotal, 0)
+    const totalRevenue = wasteItem.transactionItems.reduce((sum: number, item: any) => sum + item.subtotal, 0)
 
     return NextResponse.json({
       success: true,
@@ -78,7 +78,7 @@ export async function PUT(
 ) {
   try {
     const session = await getServerSession(authOptions)
-    if (!session || session.user.role !== "ADMIN") {
+    if (!session || (session.user as any).role !== "ADMIN") {
       return NextResponse.json(
         { 
           success: false,
