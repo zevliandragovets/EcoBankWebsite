@@ -163,7 +163,7 @@ export async function POST(request: NextRequest) {
     let totalWeight = 0
 
     const transactionItems = items.map((item: any) => {
-      const wasteItem = wasteItemMap.get(item.wasteItemId)
+      const wasteItem = wasteItemMap.get(item.wasteItemId) as any
       
       // Validate price matches current waste item price
       if (Math.abs(wasteItem!.price - item.price) > 0.01) {
