@@ -6,10 +6,10 @@ import { prisma } from "@/lib/prisma"
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
-    const { id } = params
+    const { id } = await params
 
     const wasteItem = await prisma.wasteItem.findUnique({
       where: { id },
@@ -74,7 +74,7 @@ export async function GET(
 
 export async function PUT(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
     const session = await getServerSession(authOptions)
@@ -88,7 +88,7 @@ export async function PUT(
       )
     }
 
-    const { id } = params
+    const { id } = await params
     const body = await request.json()
     const { name, price, unit, categoryId, isActive } = body
 
@@ -211,7 +211,7 @@ export async function PUT(
 
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
     const session = await getServerSession(authOptions)
@@ -225,7 +225,7 @@ export async function DELETE(
       )
     }
 
-    const { id } = params
+    const { id } = await params
 
     // Check if waste item exists
     const existingItem = await prisma.wasteItem.findUnique({
