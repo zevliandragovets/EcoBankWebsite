@@ -3,7 +3,7 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql" // atau "mysql", "sqlite"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
@@ -91,4 +91,5 @@ enum TransactionStatus {
   APPROVED
   COMPLETED
   REJECTED
+
 }
