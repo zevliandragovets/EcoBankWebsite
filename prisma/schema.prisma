@@ -10,7 +10,7 @@ datasource db {
 model User {
   id          String   @id @default(cuid())
   email       String   @unique
-  password    String   // Added this missing field
+  password    String   
   name        String
   phone       String?
   address     String?
@@ -93,3 +93,4 @@ enum TransactionStatus {
   REJECTED
 
 }
+
