@@ -5,9 +5,21 @@ import bcrypt from 'bcryptjs'
 const prisma = new PrismaClient()
 
 async function main() {
+  // Check if DATABASE_URL exists
+  if (!process.env.DATABASE_URL) {
+    console.error('❌ DATABASE_URL environment variable is not set')
+    console.log('Please set DATABASE_URL in your environment variables')
+    process.exit(1)
+  }
+
   console.log('🌱 Starting database seed...')
+  console.log('📍 Environment:', process.env.NODE_ENV || 'development')
 
   try {
+    // Test database connection
+    await prisma.$connect()
+    console.log('✅ Database connection established')
+
     // Create categories
     console.log('📂 Creating categories...')
     const categories = await Promise.all([
@@ -102,8 +114,8 @@ async function main() {
       { name: 'Sepam HP', price: 1200, unit: 'Kg', categoryId: lainnyaCategory.id }
     ]
 
-    // Use batch processing for better performance
-    console.log('🔄 Processing waste items...')
+    // Process waste items with error handling
+    let createdItems = 0
     for (const item of wasteItems) {
       try {
         await prisma.wasteItem.upsert({
@@ -115,12 +127,13 @@ async function main() {
           },
           create: item
         })
+        createdItems++
       } catch (error) {
-        console.error(`Error creating waste item ${item.name}:`, error)
+        console.error(`❌ Error creating waste item "${item.name}":`, error)
       }
     }
 
-    console.log('✅ Waste items processed:', wasteItems.length)
+    console.log('✅ Waste items processed:', createdItems, 'out of', wasteItems.length)
 
     // Create users
     console.log('👤 Creating users...')
@@ -162,7 +175,7 @@ async function main() {
     console.log('\n🎉 === DATABASE SEEDED SUCCESSFULLY ===')
     console.log('📊 Summary:')
     console.log(`  - Categories: ${categories.length}`)
-    console.log(`  - Waste Items: ${wasteItems.length}`)
+    console.log(`  - Waste Items: ${createdItems}`)
     console.log(`  - Users: 2`)
     
     console.log('\n🔐 === LOGIN CREDENTIALS ===')
@@ -175,15 +188,24 @@ async function main() {
     
     console.log('\n🚀 Ready to go! You can now sign in to your application.')
 
-  } catch (error) {
-    console.error('❌ Error during seeding:', error)
+  } catch (error: any) {
+    console.error('❌ Error during seeding:')
+    console.error('Message:', error.message)
+    console.error('Code:', error.code)
+    
+    if (error.code === 'P1001') {
+      console.error('💡 Solution: Check your DATABASE_URL connection string')
+    } else if (error.code === 'P1012') {
+      console.error('💡 Solution: Ensure DATABASE_URL starts with postgresql:// or postgres://')
+    }
+    
     throw error
   }
 }
 
 main()
   .catch((e) => {
-    console.error('❌ Seed process failed:', e)
+    console.error('❌ Seed process failed:', e.message)
     process.exit(1)
   })
   .finally(async () => {
