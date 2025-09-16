@@ -149,11 +149,9 @@ export default function WasteItemsPage() {
               </Link>
               <div className="h-6 w-px bg-emerald-200 hidden sm:block"></div>
               <div className="flex items-center space-x-3">
-                <div className="p-2 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-xl flex-shrink-0">
-                  <Recycle className="h-4 w-4 sm:h-6 sm:w-6 text-white" />
-                </div>
+                <img src="/logo.png" className='h-10 w-10 sm:h-8 sm:w-8' alt="" />
                 <span className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
-                  EcoBank
+                  RUMAH BANK SAMPAH PKS TERANTAM
                 </span>
               </div>
             </div>
@@ -393,10 +391,8 @@ export default function WasteItemsPage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="sm:col-span-2 lg:col-span-1">
               <div className="flex items-center space-x-3 mb-4 sm:mb-6">
-                <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-xl flex items-center justify-center">
-                  <Recycle className="h-4 w-4 sm:h-6 sm:w-6 text-white" />
-                </div>
-                <span className="text-lg sm:text-xl font-bold">EcoBank</span>
+                <img src="/logo.png" className='h-10 w-10 sm:w-8 sm:h-8' alt="" />
+                <span className="text-lg sm:text-xl font-bold">RUMAH BANK SAMPAH PKS TERANTAM</span>
               </div>
               <p className="text-gray-400 mb-4 sm:mb-6 text-sm sm:text-base">
                 Platform bank sampah digital terdepan untuk masa depan yang lebih hijau dan berkelanjutan.
@@ -446,7 +442,7 @@ export default function WasteItemsPage() {
           </div>
           
           <div className="border-t border-gray-800 mt-8 sm:mt-12 pt-6 sm:pt-8 text-center text-gray-400 text-sm sm:text-base">
-            <p>&copy; 2025 EcoBank. All rights reserved.</p>
+            <p>&copy; 2025 RUMAH BANK SAMPAH PKS TERANTAM. All rights reserved.</p>
           </div>
         </div>
       </footer>
