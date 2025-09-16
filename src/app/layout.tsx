@@ -6,29 +6,29 @@ import { SessionProvider } from "./Providers"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "EcoBank - Bank Sampah Digital Modern",
+  title: "RUMAH BANK SAMPAH PKS TERANTAM - Bank Sampah Digital Modern",
   description: "Transformasi sampah menjadi nilai ekonomi dengan teknologi digital yang mudah dan efisien. Bergabunglah dengan revolusi ekonomi sirkular untuk masa depan yang lebih hijau.",
   keywords: "bank sampah, digital, sampah, daur ulang, lingkungan, ekonomi sirkular",
-  authors: [{ name: "EcoBank Team" }],
-  creator: "EcoBank",
-  publisher: "EcoBank",
+  authors: [{ name: "RUMAH BANK SAMPAH PKS TERANTAM Team" }],
+  creator: "RUMAH BANK SAMPAH PKS TERANTAM",
+  publisher: "RUMAH BANK SAMPAH PKS TERANTAM",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://ecobank.vercel.app"),
+  metadataBase: new URL("https://rumahbanksampahpksterantam.vercel.app"),
   openGraph: {
-    title: "EcoBank - Bank Sampah Digital Modern",
+    title: "RUMAH BANK SAMPAH PKS TERANTAM - Bank Sampah Digital Modern",
     description: "Transformasi sampah menjadi nilai ekonomi dengan teknologi digital",
-    url: "https://ecobank.vercel.app",
-    siteName: "EcoBank",
+    url: "https://rumahbanksampahpksterantam.vercel.app",
+    siteName: "RUMAH BANK SAMPAH PKS TERANTAM",
     images: [
       {
-        url: "/og-image.png",
+        url: "/logo.png",
         width: 1200,
         height: 630,
-        alt: "EcoBank - Bank Sampah Digital",
+        alt: "RUMAH BANK SAMPAH PKS TERANTAM - Bank Sampah Digital",
       },
     ],
     locale: "id_ID",
@@ -36,9 +36,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "EcoBank - Bank Sampah Digital Modern",
+    title: "RUMAH BANK SAMPAH PKS TERANTAM - Bank Sampah Digital Modern",
     description: "Transformasi sampah menjadi nilai ekonomi dengan teknologi digital",
-    images: ["/twitter-image.png"],
+    images: ["/logo.png"],
   },
   robots: {
     index: true,
@@ -61,10 +61,10 @@ export default function RootLayout({
   return (
     <html lang="id">
       <head>
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="icon" type="image/png" href="/logo.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/logo.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/logo.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/logo.png" />
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="theme-color" content="#059669" />
       </head>
