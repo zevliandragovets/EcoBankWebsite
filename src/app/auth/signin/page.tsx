@@ -47,12 +47,10 @@ export default function SignInPage() {
       <div className="max-w-md w-full">
         {/* Logo */}
         <div className="text-center mb-4">
-          <Link href="/" className="inline-flex items-center space-x-2">
-            <div className="p-2 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-xl flex-shrink-0">
-              <Recycle className="h-4 w-4 sm:h-6 sm:w-6 text-white" />
-            </div>
-            <span className="text-3xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
-              EcoBank
+          <Link href="/" className="inline-flex items-center space-x-1">
+            <img src="/logo.png" className="h-10 w-10 sm:h-8 sm:w-8" alt="" />
+            <span className="text-xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
+              RUMAH BANK SAMPAH PKS TERANTAM
             </span>
           </Link>
           <p className="text-gray-600">Masuk ke akun Anda</p>
