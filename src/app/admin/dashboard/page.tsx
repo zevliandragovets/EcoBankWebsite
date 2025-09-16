@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { useSession } from "next-auth/react"
+import Image from "next/image";
 import Link from "next/link"
 import { 
   Users, 
@@ -493,7 +494,7 @@ export default function AdminDashboard() {
         <div className="container mx-auto px-4 sm:px-6 py-3 sm:py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-1 sm:space-x-2 min-w-0 flex-1">
-              <img src="/logo.png" className="h-10 w-10 sm:h-12 sm:w-12" alt="" />
+              <Image src="/logo.png" alt="Logo Rumah Bank Sampah" width={48} height={48} className="sm:w-12 sm:h-12" />
               <div className="min-w-0">
                 <h1 className="text-lg sm:text-2xl font-bold text-gray-800 truncate">RUMAH BANK SAMPAH PKS TERANTAM Dashboard</h1>
                 <p className="text-xs sm:text-sm text-gray-600 hidden sm:block">Kelola sampah, raih keuntungan</p>
