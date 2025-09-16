@@ -12,12 +12,10 @@ export default function HomePage() {
       <nav className="bg-white/90 backdrop-blur-xl border-b border-emerald-100 sticky top-0 z-50">
         <div className="container mx-auto px-4 sm:px-6 py-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-2">
-              <div className="p-2 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-xl flex-shrink-0">
-                <Recycle className="h-4 w-4 sm:h-6 sm:w-6 text-white" />
-              </div>
-              <span className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
-                EcoBank
+            <div className="flex items-center space-x-1">
+              <img src="/logo.png" className="w-10 h-10 sm:h-8 sm:w-8" alt="" />
+              <span className="text-lg sm:text-2xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
+                RUMAH BANK SAMPAH PKS TERANTAM
               </span>
             </div>
             
@@ -70,9 +68,9 @@ export default function HomePage() {
             <span className="text-emerald-600 text-xs sm:text-sm font-medium">🌱 Platform Bank Sampah Terdepan</span>
           </div>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight">
-            Transformasi
+            Rumah Bank Sampah 
             <span className="block bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
-              Sampah Digital
+              PKS Terantam Masa Depan
             </span>
             Masa Depan
           </h1>
@@ -120,7 +118,7 @@ export default function HomePage() {
       <section className="container mx-auto px-4 sm:px-6 py-16 sm:py-20">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-            Mengapa EcoBank Berbeda?
+            Mengapa RUMAH BANK SAMPAH PKS TERANTAM Berbeda?
           </h2>
           <p className="text-gray-600 text-base sm:text-lg max-w-2xl mx-auto px-2">
             Platform terintegrasi dengan teknologi terdepan untuk pengalaman bank sampah yang tak tertandingi
@@ -212,7 +210,7 @@ export default function HomePage() {
       <section className="container mx-auto px-4 sm:px-6 py-16 sm:py-20">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-            Kata Mereka Tentang EcoBank
+            Kata Mereka Tentang RUMAH BANK SAMPAH PKS TERANTAM
           </h2>
           <p className="text-gray-600 text-base sm:text-lg px-2">
             Pengalaman nyata dari pengguna setia kami
@@ -270,7 +268,7 @@ export default function HomePage() {
             Siap Memulai Perjalanan Hijau Anda?
           </h2>
           <p className="text-lg sm:text-xl text-gray-600 mb-6 sm:mb-8 max-w-2xl mx-auto px-2">
-            Bergabunglah dengan ribuan pengguna yang telah merasakan manfaat finansial dan lingkungan dari EcoBank
+            Bergabunglah dengan ribuan pengguna yang telah merasakan manfaat finansial dan lingkungan dari RUMAH BANK SAMPAH PKS TERANTAM
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
             <Link 
@@ -296,10 +294,8 @@ export default function HomePage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="sm:col-span-2 lg:col-span-1">
               <div className="flex items-center space-x-3 mb-4 sm:mb-6">
-                <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-xl flex items-center justify-center">
-                  <Recycle className="h-4 w-4 sm:h-6 sm:w-6 text-white" />
-                </div>
-                <span className="text-lg sm:text-xl font-bold">EcoBank</span>
+              <img src="/logo.png" className="h-10 w-10 sm:w-8 sm:h-8" alt="" />
+                <span className="text-lg sm:text-xl font-bold">RUMAH BANK SAMPAH PKS TERANTAM</span>
               </div>
               <p className="text-gray-400 mb-4 sm:mb-6 text-sm sm:text-base">
                 Platform bank sampah digital terdepan untuk masa depan yang lebih hijau dan berkelanjutan.
@@ -349,7 +345,7 @@ export default function HomePage() {
           </div>
           
           <div className="border-t border-gray-800 mt-8 sm:mt-12 pt-6 sm:pt-8 text-center text-gray-400 text-sm sm:text-base">
-            <p>&copy; 2025 EcoBank. All rights reserved.</p>
+            <p>&copy; 2025 RUMAH BANK SAMPAH PKS TERANTAM. All rights reserved.</p>
           </div>
         </div>
       </footer>
@@ -453,7 +449,7 @@ const testimonials = [
   {
     name: "Budi Hartono",
     location: "Bandung",
-    text: "Sebagai pemilik warung, EcoBank membantu saya mengolah sampah jadi tambahan penghasilan."
+    text: "Sebagai pemilik warung, RUMAH BANK SAMPAH PKS TERANTAM membantu saya mengolah sampah jadi tambahan penghasilan."
   },
   {
     name: "Indira Sari",
@@ -494,7 +490,7 @@ const faqs = [
     answer: "Pencairan bisa dilakukan kapan saja dengan minimum withdrawal Rp 50,000. Proses transfer maksimal 1x24 jam."
   },
   {
-    question: "Apakah EcoBank tersedia di seluruh Indonesia?",
+    question: "Apakah RUMAH BANK SAMPAH PKS TERANTAM tersedia di seluruh Indonesia?",
     answer: "Saat ini kami melayani Jakarta, Bandung, Surabaya, dan Medan. Ekspansi ke kota lain sedang dalam tahap pengembangan."
   }
 ]
