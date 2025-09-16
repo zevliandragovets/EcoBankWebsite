@@ -575,12 +575,10 @@ export default function UserDashboard() {
         <div className="container mx-auto px-4 sm:px-6 py-4">
           <div className="flex items-center justify-between">
             {/* Logo and Title */}
-            <div className="flex items-center space-x-3 sm:space-x-4 min-w-0 flex-1">
-              <div className="p-2 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-xl flex-shrink-0">
-                <Recycle className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
-              </div>
+            <div className="flex items-center space-x-1 sm:space-x-2min-w-0 flex-1">
+              <img src="/logo.png" className="h-10 w-10 sm:w-12 sm:h-12" alt="" />
               <div className="min-w-0">
-                <h1 className="text-lg sm:text-2xl font-bold text-gray-800 truncate">EcoBank Dashboard</h1>
+                <h1 className="text-lg sm:text-2xl font-bold text-gray-800 truncate">RUMAH BANK SAMPAH PKS TERANTAM Dashboard</h1>
                 <p className="text-xs sm:text-sm text-gray-600 hidden sm:block">Kelola sampah, raih keuntungan</p>
               </div>
             </div>
